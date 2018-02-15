@@ -1,0 +1,128 @@
+// Base Styles
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+// NOTE
+// html is set to 62.5% so that all the REM measurements throughout Skeleton
+// are based on 10px sizing. So basically 1.5rem = 15px :)
+
+html, body{
+    background-color: $dark-grey;
+    width: 100%!important;
+    min-height: 100vh!important;
+    top:0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5em; // currently ems cause chrome bug misinterpreting rems on body element
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: $font-family;
+  color: $font-color;
+    background: $dark-grey url(../images/mandala_texture_dark.svg) repeat top left;
+}
+
+// Links
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+a {
+  color: $link-color;
+  &:hover {
+    color: darken($link-color, 5%);
+  }
+}
+
+// Misc
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid $light-grey;
+}
+
+.highlight{color:$primary-color;}
+
+header{
+    h1#title{
+        display: block;
+        position: absolute;
+        left: -100%;
+        font-size: .25em;
+        width: 100%;
+        
+        &::after{
+            content: url(../images/CRM.svg);
+            display: block;
+            position: absolute;
+            top: 3em;
+            left: 100%;
+            margin-left:3em; 
+            width: 200px;
+        }
+    }
+    
+    nav{
+        figure.burger{
+            background: $primary-color;
+            width: 6em;
+            height: 6em;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            
+            img{
+                width: 3em;
+                height: auto;
+                top: 50%;
+                left: 50%;
+                transform: translate(50%, 50%);
+            }
+        }
+        
+        ul.nav-desktop{
+            position: absolute;
+            top:1.5em;
+            right: 0;
+            display: none;
+            line-height: 3em;
+            border-right: 3px solid $primary-color;
+            
+            li{
+                list-style: none;
+                float: right;
+                text-transform: uppercase;
+                font-size: .85em;
+                line-height: 1em;
+                margin-right: 1.5em;
+                margin-top:1em;
+                margin-bottom: 1em;
+                font:$nav-font;
+                color:$medium-grey;
+                
+                
+                &:hover{
+                    border-bottom: 3px solid $primary-color!important;
+                    cursor:pointer!important;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    font-size: .75em;
+    text-align: center;
+    width: 100%;
+    line-height: 1.5em;
+}
