@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+    <title>Claudia Ruiz Massieu<a href="index.html" id="logoarea"></a></title>
+  <meta name="description" content="Biografía y trayectoria de Claudia Ruiz Massieu">
+  <meta name="author" content="wm4">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+</head>
+<body class="home">
+    <div id="navmobi" class="panel">
+        <nav>
+            <ul>
+                <a href="index.html"><li>Portada</li></a>
+                <a><li>Editorial</li></a>
+                <a href="#"><li>Galería</li></a>
+                <a><li>Discursos</li></a>
+                <a><li>Noticias</li></a>
+                <a><li>Biografía</li></a>
+            </ul>
+        </nav>
+    </div>
+    <div id="panel" class="panel focused">
+        <!-- Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <header class="main_header">
+            <h1 id="title">Claudia Ruiz Massieu<span id="logoarea"></span></h1>
+            <nav id="menu" class="row"> 
+                <figure class="burger">
+                    <img src="images/burger.svg">
+                </figure>
+                <ul class="nav-desktop">
+                    <a><li>Editorial</li></a>
+                    <a href="#"><li>Galería</li></a>
+                    <a><li>Discursos</li></a>
+                    <a><li>Noticias</li></a>
+                    <a><li>Biografía</li></a>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <section id="gals" class="fullwidth">
+            <main id="slider" class="">
+                <article>
+                    <figure class="image-slide" style="background-image: url(images/background-home-3.jpg)">
+                        <figcaption class="pie">
+                            <h1>"Un título elocuente"</h1>
+                            <p>Descripción corta de la imágen presentada</p>
+                        </figcaption>
+                    </figure>
+                </article>
+            </main> 
+            <nav id="galsnav" class="scrollbar">
+                <li>
+                    <a href="#">
+                        <figure style="background-image: url(images/background-bio-2.jpg)">
+                            <figcaption>Legislaturas</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure style="background-image: url(images/background-bio-4.jpg)">
+                            <figcaption>Campaña al Senado 2012</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure style="background-image: url(images/background-home-4.jpg)">
+                            <figcaption>Tianguis Turístico</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure style="background-image: url(images/background-home-2.jpg)">
+                            <figcaption>Ferias Internacionales</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure style="background-image: url(images/background-bio-3.jpg)">
+                            <figcaption>Giras Nacionales</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure style="background-image: url(images/background-home-5.jpg)">
+                            <figcaption>Giras Internacionales</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure style="background-image: url(images/background-bio-1.jpg)">
+                            <figcaption>PRI</figcaption>
+                            <figcaption>PRI</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </nav>
+        </section>
+
+
+        <footer><a href="#">aviso de privacidad</a> | © Todos los derechos reservados</footer>
+    </div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+    
+    <script>
+        var jt = jt || {};
+
+        // same functions as above
+        jt.nav = (function() {
+            function mobileMenu() {
+
+                // querySelector returns the first element it finds with the correct selector
+                // addEventListener is roughly analogous to $.on()
+                document.querySelector('.burger').addEventListener('click', function(e) {
+                    console.log("¡BURGER!");
+                    e.preventDefault();
+
+                    // querySelectorAll returns all the nodes it finds with the selector
+                    // however, you can't iterate over querySelectorAll results (!!)
+                    // so this is a workaround - call Array.map and pass in the 
+                    // list of nodes along with a function
+                    // technically querySelectorAll returns a NodeList not an Array so
+                    /// doesn't have standard array functions
+                    [].map.call(document.querySelectorAll('.panel'), function(el) {
+                        console.log(el);
+
+                        // classList is the key here - contains functions to manipulate
+                        // classes on an element
+                        el.classList.toggle('focused');
+                    });
+                });
+            }
+
+            return {
+                mobileMenu: mobileMenu
+            };
+        })();
+
+
+        jt.helpers = (function() {
+            function jsCheck() {
+
+                // again, use classList to manipulate classes on elements
+                var bodyClass = document.querySelector('html').classList;
+                bodyClass.remove('no-js');
+                bodyClass.add('js');
+            }
+
+            return {
+                jsCheck: jsCheck
+            };
+        })();
+
+
+        // start everything
+        // this isn't in a doc.ready - loaded at the bottom of the page so the DOM is already ready
+        jt.helpers.jsCheck();
+        jt.nav.mobileMenu();
+    </script>
+
+</html>

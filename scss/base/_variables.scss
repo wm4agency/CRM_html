@@ -12,6 +12,7 @@ $bp-larger-than-desktophd : "min-width: 1200px" !default;
 $light:#f2f2f0;
 $light-grey: #e1e1e1 !default;
 $medium-grey: #666;
+$darkshade-grey: #2e2e2e;
 $dark-grey: #333 !default;
 $primary-color: #ff1d25 !default;
 $secondary-color: darken($primary-color, 15%) !default;
@@ -33,3 +34,18 @@ $column-margin: 4% !default; // space between columns
 
 // Misc
 $global-radius: 4px !default;
+
+$greyback: $dark-grey url(../images/mandala_texture_dark.svg) repeat top left;
+$redback: $primary-color url(../images/mandala_texture_red.svg) repeat top left;
+
+
+@mixin img_box($p){
+    background: $dark-grey no-repeat center center;
+    background-size: cover;
+    
+    &:after{
+        content:"";
+        display: block;
+        padding-bottom: $p;
+    }
+}

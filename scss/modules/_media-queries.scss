@@ -17,9 +17,30 @@
 
 // Larger than desktop
 @media (#{$bp-larger-than-desktop}) {
+    div#navmobi{
+        display: none;
+    }
+    
     header{
-        h1#title::after{
-            width: 270px!important;
+        height: 150px;
+        
+        h1#title{
+            left: -7em;
+            width: auto;
+       
+            &::after{
+                width: 270px!important;
+                top: 5em;
+                margin-left: 5em;
+            }
+            
+            span{
+                width: 270px!important;
+                top: 5em;
+                margin-left: 5em;
+                height: 80px;
+                position: absolute;
+            }
         }
 
         nav{
@@ -27,6 +48,9 @@
             ul.nav-desktop{display: block!important;}
         }
     }
+    
+    /* PARTIALS */
+    @import "../parts/gals_d";
 }
 
 // Larger than Desktop HD

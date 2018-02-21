@@ -1,0 +1,68 @@
+section#gals{
+    position: relative;
+    width: 100%;
+    
+    nav#galsnav{
+        width: 100%;
+        float: right!important;
+        background: $darkshade-grey;
+        margin: 0;
+        padding: 0;
+ 
+        li{            
+            width: 33.33%;
+            float: left;
+            max-height: 33vw;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: white;
+                figure{
+                    @include img-box(85%);
+
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    
+                    figcaption{
+                        position: absolute;
+                        bottom: .5em;
+                        left: .5em;
+                        font-size: .75em;
+                    }
+                }
+            }
+        }
+    }
+    main#slider{
+        width: 100%;
+        float: right!important;
+        background: $primary-color;
+        max-height: 80vw;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        
+        article{
+            figure{
+                @include img-box(70%);
+                
+                margin: 0;
+                padding: 1em;
+                min-width: 100%;
+                position: relative;
+                
+                figcaption{
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

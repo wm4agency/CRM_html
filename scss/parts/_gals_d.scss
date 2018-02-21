@@ -1,0 +1,17 @@
+section#gals{
+
+    nav#galsnav{
+        width: 30%;
+        height: 40vw;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        
+        li{
+            width: 50%!important;
+        }
+    }
+    main#slider{
+        width: 70%;
+        height: 40vw;
+    }
+}
