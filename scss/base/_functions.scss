@@ -15,3 +15,7 @@
 @function grid-offset-length($n) {
   @return grid-column-width($n) + $column-margin;
 }
+
+@function url-safe-colour($colour) {
+    @return '%23' + str-slice('#{$colour}', 2, -1)
+}

@@ -13,14 +13,16 @@
 @media (#{$bp-larger-than-phablet}) {}
 
 // Larger than tablet
-@media (#{$bp-larger-than-tablet}) {}
+@media (#{$bp-larger-than-tablet}) {
+
+}
 
 // Larger than desktop
 @media (#{$bp-larger-than-desktop}) {
     div#navmobi{
         display: none;
     }
-    
+        
     header{
         height: 150px;
         
@@ -34,23 +36,24 @@
                 margin-left: 5em;
             }
             
-            span{
+            a#logoarea{
                 width: 270px!important;
                 top: 5em;
                 margin-left: 5em;
                 height: 80px;
-                position: absolute;
             }
         }
 
         nav{
             figure.burger{display: none!important;}
-            ul.nav-desktop{display: block!important;}
+            ul.nav-desktop{display: block!important; z-index: 999;}
         }
     }
     
     /* PARTIALS */
     @import "../parts/gals_d";
+    @import "../parts/bio_d";
+    @import "../parts/discs_d";
 }
 
 // Larger than Desktop HD

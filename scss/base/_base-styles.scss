@@ -118,7 +118,7 @@ hr {
 header{
     z-index: 999;
     height: 90px;
-    background: url(images/header_gradient.svg) repeat-y left center;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 150'%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='1.5' y1='150' x2='1.5'%3E%3Cstop offset='.02' stop-opacity='0'/%3E%3Cstop offset='.975' stop-opacity='.35'/%3E%3C/linearGradient%3E%3Cpath fill='url%28%23a%29' d='M0 0h3v150H0z'/%3E%3C/svg%3E%0A") repeat-x left center;
     
     h1#title{
         display: block;
@@ -136,11 +136,16 @@ header{
             margin-left:3em; 
             width: 200px;
         }
-        
+
         a#logoarea{
-            cursor: pointer;
-            background: transparent;
-            z-index: 1000;
+            width: 200px;
+            display: block;
+            position: absolute;
+            top: 3em;
+            left: 100%;
+            margin-left: 3em;
+            z-index: 99;
+            height: 60px;
         }
     }
     
@@ -185,7 +190,7 @@ header{
                 margin-bottom: 1em;
                 font:$nav-font;
                 color:$medium-grey;
-                text-decoration: none
+                text-decoration: none;
                 
                 &:hover{
                     border-bottom: 1px solid $primary-color!important;
@@ -209,3 +214,5 @@ footer{
 
 /* Partials */
 @import "../parts/gals";
+@import "../parts/bio";
+@import "../parts/discs";

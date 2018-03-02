@@ -1,0 +1,13 @@
+@mixin arrowcontent($color:#ff1d25){
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.5 17'%3E%3Cpath fill='#{url-safe-colour($color)}' d='M0 0l8.5 8.5L0 17z'/%3E%3C/svg%3E");
+    display: block;
+    position: absolute;
+}
+
+@mixin arrowback($color:#ff1d25){
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.5 17'%3E%3Cpath fill='#{url-safe-colour($color)}' d='M0 0l8.5 8.5L0 17z'/%3E%3C/svg%3E");
+}
+
+@mixin underlined($color:#fff){
+    border-bottom: 1px solid $color;
+}

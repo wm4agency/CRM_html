@@ -1,0 +1,33 @@
+body.discursos {
+    
+    section#main-wrapper{
+        min-width: 100%;
+        min-height: 80%;
+        height: 80%!important;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    div.container{
+        max-width: 1350px;
+        width: 100%;
+        padding: 3em;
+        height: 100%;
+    }
+    
+    article{
+        height: 100%;
+        
+        main{
+            max-height: 100%;
+            overflow-y: scroll;
+            
+            p{
+                &:first-of-type{margin-top: 0;}
+            }
+        }
+    }
+    
+    
+}

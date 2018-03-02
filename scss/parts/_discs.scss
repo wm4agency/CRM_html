@@ -1,0 +1,91 @@
+body.discursos {
+
+    section#main-wrapper{
+        background: white;
+        color:$darkshade-grey;
+        
+        article{
+            
+            h1, summary, time, span.place{
+                width: 100%;
+                display: block;
+            }
+            
+            time, span.place{
+                font-size: .75em;
+            }
+            
+            h1{
+                font-size: 5em;
+                line-height: 1em;
+                position: relative;
+                            
+                &::after{
+                    @include arrowcontent();
+                    height: .25em;
+                    width: .25em;
+                    right: 0;
+                    bottom: 2.125rem;
+                    transform: rotate(45deg);
+                }
+            }
+            
+            summary{
+                margin-bottom: 1.5em;
+            }
+            
+            time{
+                color: $primary-color;
+            }
+            
+            span.place{
+                font-weight: 700;
+            }
+            
+            summary{
+                font-size: .9em;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            main{
+                
+                p{
+                    margin-bottom: .5em;
+                }
+                
+                &:first-of-type{margin-top: 1em;}
+            }
+            
+        }
+        
+        aside{
+
+            div#tags{
+
+                ul{
+                    border-top: 1px solid black;
+                    border-bottom: 1px solid black;
+                    padding: 1em 1em .5em 1em;
+                    display: table;
+                }
+
+                li{
+                    list-style: none;
+                    border-left: 1px solid $light-grey;
+                    padding: 0 .75em;
+                    float: left;
+                    font-size: .75em;
+                    line-height: .8em;
+                    color: $medium-grey;
+
+                    &:first-child { border-left: none; padding-left: 0; }
+
+                    &:hover{
+                        color: $primary-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

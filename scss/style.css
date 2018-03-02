@@ -261,37 +261,95 @@ body {
   color: white;
   background: #333 url(../images/mandala_texture_dark.svg) repeat top left; }
 
-/* line 33, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+/* line 31, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+#panel {
+  min-height: 100vh;
+  min-height: 100%;
+  min-width: 100vw;
+  min-width: 100%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 100%; }
+  /* line 42, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+  #panel.focused {
+    right: 0; }
+
+/* line 47, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+div#navmobi {
+  display: block;
+  position: absolute;
+  height: 100vh;
+  height: 100%;
+  width: 100vw;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  background: #ff1d25 url(../images/mandala_texture_red.svg) repeat top left; }
+  /* line 59, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+  div#navmobi.focused {
+    right: 0; }
+  /* line 63, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+  div#navmobi nav {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    /* line 68, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+    div#navmobi nav ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block; }
+      /* line 75, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+      div#navmobi nav ul a {
+        color: #2e2e2e;
+        text-decoration: none; }
+        /* line 79, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+        div#navmobi nav ul a:active {
+          color: #f2f2f0; }
+        /* line 83, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+        div#navmobi nav ul a li {
+          list-style: none;
+          font-size: 1.5em;
+          line-height: 2em;
+          text-align: center;
+          text-transform: uppercase;
+          border-bottom: 1px solid #2e2e2e; }
+
+/* line 99, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
 a {
   color: #ff1d25; }
-  /* line 35, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+  /* line 101, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
   a:hover {
     color: #ff040c; }
 
-/* line 43, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+/* line 109, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #e1e1e1; }
 
-/* line 50, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+/* line 116, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
 .highlight {
   color: #ff1d25; }
 
-/* line 52, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+/* line 118, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
 header {
   z-index: 999;
   height: 90px;
-  background: url(images/header_gradient.svg) repeat-y left center; }
-  /* line 57, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 150'%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='1.5' y1='150' x2='1.5'%3E%3Cstop offset='.02' stop-opacity='0'/%3E%3Cstop offset='.975' stop-opacity='.35'/%3E%3C/linearGradient%3E%3Cpath fill='url%28%23a%29' d='M0 0h3v150H0z'/%3E%3C/svg%3E%0A") repeat-x left center; }
+  /* line 123, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
   header h1#title {
     display: block;
     position: absolute;
     left: -100%;
     font-size: .25em;
     width: 100%; }
-    /* line 64, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+    /* line 130, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
     header h1#title::after {
       content: url(../images/CRM.svg);
       display: block;
@@ -300,7 +358,17 @@ header {
       left: 100%;
       margin-left: 3em;
       width: 200px; }
-  /* line 76, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+    /* line 140, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+    header h1#title a#logoarea {
+      width: 200px;
+      display: block;
+      position: absolute;
+      top: 3em;
+      left: 100%;
+      margin-left: 3em;
+      z-index: 99;
+      height: 60px; }
+  /* line 153, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
   header nav figure.burger {
     background: #ff1d25;
     width: 6em;
@@ -310,14 +378,14 @@ header {
     top: 0;
     right: 0;
     overflow: hidden; }
-    /* line 86, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+    /* line 163, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
     header nav figure.burger img {
       width: 3em;
       height: auto;
       top: 50%;
       left: 50%;
       transform: translate(50%, 50%); }
-  /* line 95, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+  /* line 172, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
   header nav ul.nav-desktop {
     position: absolute;
     top: 1.5em;
@@ -325,10 +393,10 @@ header {
     display: none;
     line-height: 3em;
     border-right: 3px solid #ff1d25; }
-    /* line 103, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+    /* line 180, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
     header nav ul.nav-desktop li {
       list-style: none; }
-    /* line 106, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+    /* line 183, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
     header nav ul.nav-desktop a {
       float: right;
       text-transform: uppercase;
@@ -339,14 +407,14 @@ header {
       margin-bottom: 1em;
       font: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #666;
-      text-decoration: none header nav ul.nav-desktop a; }
-      /* line 118, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
-      header nav ul.nav-desktop a :hover {
+      text-decoration: none; }
+      /* line 195, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+      header nav ul.nav-desktop a:hover {
         border-bottom: 1px solid #ff1d25 !important;
         cursor: pointer !important;
         color: white; }
 
-/* line 128, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
+/* line 205, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_base-styles.scss */
 footer {
   position: absolute;
   bottom: 0;
@@ -364,7 +432,7 @@ section#gals {
   section#gals nav#galsnav {
     width: 100%;
     float: right !important;
-    background: #333;
+    background: #2e2e2e;
     margin: 0;
     padding: 0; }
     /* line 12, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_gals.scss */
@@ -386,13 +454,20 @@ section#gals {
           background-size: cover;
           width: 100%;
           margin: 0;
-          padding: 0; }
-          /* line 41, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_variables.scss */
+          padding: 0;
+          position: relative; }
+          /* line 46, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_variables.scss */
           section#gals nav#galsnav li a figure:after {
             content: "";
             display: block;
             padding-bottom: 85%; }
-  /* line 34, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_gals.scss */
+          /* line 32, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_gals.scss */
+          section#gals nav#galsnav li a figure figcaption {
+            position: absolute;
+            bottom: .5em;
+            left: .5em;
+            font-size: .75em; }
+  /* line 42, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_gals.scss */
   section#gals main#slider {
     width: 100%;
     float: right !important;
@@ -401,7 +476,7 @@ section#gals {
     margin: 0;
     padding: 0;
     overflow: hidden; }
-    /* line 44, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_gals.scss */
+    /* line 52, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_gals.scss */
     section#gals main#slider article figure {
       background: #333 no-repeat center center;
       background-size: cover;
@@ -409,16 +484,93 @@ section#gals {
       padding: 1em;
       min-width: 100%;
       position: relative; }
-      /* line 41, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_variables.scss */
+      /* line 46, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_variables.scss */
       section#gals main#slider article figure:after {
         content: "";
         display: block;
         padding-bottom: 70%; }
-      /* line 52, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_gals.scss */
+      /* line 60, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_gals.scss */
       section#gals main#slider article figure figcaption {
         display: block;
         position: absolute;
         bottom: 0; }
+
+/* line 2, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_bio.scss */
+body.bio section#img-fader {
+  background: #d00007; }
+
+/* line 3, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+body.discursos section#main-wrapper {
+  background: white;
+  color: #2e2e2e; }
+  /* line 9, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+  body.discursos section#main-wrapper article h1, body.discursos section#main-wrapper article summary, body.discursos section#main-wrapper article time, body.discursos section#main-wrapper article span.place {
+    width: 100%;
+    display: block; }
+  /* line 14, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+  body.discursos section#main-wrapper article time, body.discursos section#main-wrapper article span.place {
+    font-size: .75em; }
+  /* line 18, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+  body.discursos section#main-wrapper article h1 {
+    font-size: 5em;
+    line-height: 1em;
+    position: relative; }
+    /* line 23, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+    body.discursos section#main-wrapper article h1::after {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.5 17'%3E%3Cpath fill='%23ff1d25' d='M0 0l8.5 8.5L0 17z'/%3E%3C/svg%3E");
+      display: block;
+      position: absolute;
+      height: .25em;
+      width: .25em;
+      right: 0;
+      bottom: 2.125rem;
+      transform: rotate(45deg); }
+  /* line 33, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+  body.discursos section#main-wrapper article summary {
+    margin-bottom: 1.5em; }
+  /* line 37, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+  body.discursos section#main-wrapper article time {
+    color: #ff1d25; }
+  /* line 41, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+  body.discursos section#main-wrapper article span.place {
+    font-weight: 700; }
+  /* line 45, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+  body.discursos section#main-wrapper article summary {
+    font-size: .9em;
+    text-transform: uppercase;
+    font-weight: 700; }
+  /* line 53, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+  body.discursos section#main-wrapper article main p {
+    margin-bottom: 1em; }
+    /* line 56, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+    body.discursos section#main-wrapper article main p::first-line {
+      padding-left: 3em; }
+    /* line 58, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+    body.discursos section#main-wrapper article main p:first-of-type body.discursos section#main-wrapper article main p ::first-line {
+      padding-left: 0; }
+  /* line 68, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+  body.discursos section#main-wrapper aside div#tags ul {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1em 1em .5em 1em;
+    display: table; }
+  /* line 75, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+  body.discursos section#main-wrapper aside div#tags li {
+    list-style: none;
+    border-left: 1px solid #e1e1e1;
+    padding: 0 .75em;
+    float: left;
+    font-size: .75em;
+    line-height: .8em;
+    color: #666; }
+    /* line 84, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+    body.discursos section#main-wrapper aside div#tags li:first-child {
+      border-left: none;
+      padding-left: 0; }
+    /* line 86, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs.scss */
+    body.discursos section#main-wrapper aside div#tags li:hover {
+      color: #ff1d25;
+      cursor: pointer; }
 
 /* line 4, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/base/_utils.scss */
 .u-full-width {
@@ -903,6 +1055,77 @@ th:last-child,
 td:last-child {
   padding-right: 0; }
 
+/* line 1, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+section.accordion {
+  /* Acordeon styles */
+  /* :checked */
+  /* Icon */ }
+  /* line 3, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+  section.accordion .tab {
+    position: relative;
+    margin-bottom: 1em;
+    width: 90%;
+    overflow: hidden;
+    padding-left: 2em; }
+  /* line 10, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+  section.accordion input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1; }
+  /* line 15, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+  section.accordion label {
+    position: relative;
+    display: block;
+    padding: 0;
+    font-weight: bold;
+    line-height: 1.5;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 100;
+    border-bottom: 1px solid #fff; }
+  /* line 28, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+  section.accordion .tab-content {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .35s;
+    -o-transition: max-height .35s;
+    transition: max-height .35s; }
+  /* line 36, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+  section.accordion .tab-content p {
+    margin: 1em; }
+  /* line 40, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+  section.accordion input:checked ~ .tab-content {
+    max-height: 60em; }
+  /* line 44, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+  section.accordion label::before {
+    position: absolute;
+    left: -1em;
+    top: .5em;
+    display: block;
+    width: .5em;
+    height: .5em;
+    line-height: .25em;
+    text-align: center;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+    margin-right: 3em; }
+  /* line 58, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+  section.accordion input[type=checkbox] + label::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.5 17'%3E%3Cpath fill='%23ff1d25' d='M0 0l8.5 8.5L0 17z'/%3E%3C/svg%3E");
+    display: block;
+    position: absolute; }
+  /* line 61, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+  section.accordion input[type=radio] + label::before {
+    content: "\25BC"; }
+  /* line 64, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+  section.accordion input[type=checkbox]:checked + label::before {
+    transform: rotate(90deg); }
+  /* line 67, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_accordion.scss */
+  section.accordion input[type=radio]:checked + label::before {
+    transform: rotateX(180deg); }
+
 /* line 4, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_spacing.scss */
 button,
 .button {
@@ -931,33 +1154,48 @@ form {
 *  STYLE 4
 */
 /* line 5, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_scrollbars.scss */
-#style-4::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #F5F5F5; }
+.scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; }
 
 /* line 11, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_scrollbars.scss */
-#style-4::-webkit-scrollbar {
-  width: 10px;
-  background-color: #F5F5F5; }
+.scrollbar::-webkit-scrollbar {
+  width: 1px;
+  background-color: #333; }
 
 /* line 17, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_scrollbars.scss */
-#style-4::-webkit-scrollbar-thumb {
-  background-color: #000000;
-  border: 2px solid #555555; }
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ff1d25;
+  border: none; }
 
 @media (min-width: 1000px) {
-  /* line 20, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_media-queries.scss */
+  /* line 22, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_media-queries.scss */
+  div#navmobi {
+    display: none; }
+  /* line 26, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_media-queries.scss */
   header {
     height: 150px; }
-    /* line 23, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_media-queries.scss */
-    header h1#title::after {
-      width: 270px !important; }
-    /* line 28, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_media-queries.scss */
+    /* line 29, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_media-queries.scss */
+    header h1#title {
+      left: -7em;
+      width: auto; }
+      /* line 33, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_media-queries.scss */
+      header h1#title::after {
+        width: 270px !important;
+        top: 5em;
+        margin-left: 5em; }
+      /* line 39, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_media-queries.scss */
+      header h1#title a#logoarea {
+        width: 270px !important;
+        top: 5em;
+        margin-left: 5em;
+        height: 80px; }
+    /* line 48, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_media-queries.scss */
     header nav figure.burger {
       display: none !important; }
-    /* line 29, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_media-queries.scss */
+    /* line 49, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/modules/_media-queries.scss */
     header nav ul.nav-desktop {
-      display: block !important; }
+      display: block !important;
+      z-index: 999; }
   /* PARTIALS */
   /* line 3, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_gals_d.scss */
   section#gals nav#galsnav {
@@ -971,7 +1209,42 @@ form {
   /* line 13, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_gals_d.scss */
   section#gals main#slider {
     width: 70%;
-    height: 40vw; } }
+    height: 40vw; }
+  /* line 3, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_bio_d.scss */
+  body.bio main {
+    max-width: 40%;
+    width: 40vw;
+    margin-left: 10%; }
+  /* line 8, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_bio_d.scss */
+  body.bio section#img-fader {
+    min-height: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    z-index: 0; }
+  /* line 3, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs_d.scss */
+  body.discursos section#main-wrapper {
+    min-width: 100%;
+    min-height: 80%;
+    height: 80% !important;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0; }
+  /* line 12, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs_d.scss */
+  body.discursos div.container {
+    max-width: 1350px;
+    width: 100%;
+    padding: 3em;
+    height: 100%; }
+  /* line 19, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs_d.scss */
+  body.discursos article {
+    height: 100%; }
+    /* line 22, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/parts/_discs_d.scss */
+    body.discursos article main {
+      max-height: 100%;
+      overflow-y: scroll; } }
 
 /* components */
 /* line 1, ../../Users/Estrategia y Desarro/sites/CRM_html/scss/components/_slideout.scss */

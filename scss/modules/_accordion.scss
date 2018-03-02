@@ -1,0 +1,71 @@
+section.accordion{
+    /* Acordeon styles */
+    .tab {
+        position: relative;
+        margin-bottom: 1em;
+        width: 90%;
+        overflow: hidden;
+        padding-left: 2em;
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+    label {
+        position: relative;
+        display: block;
+        padding: 0;
+        font-weight: bold;
+        line-height: 1.5;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 1.25em;
+        font-weight: 100;
+        @include underlined();
+    }
+    
+    .tab-content {
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height .35s;
+        -o-transition: max-height .35s;
+        transition: max-height .35s;
+    }
+
+    .tab-content p {
+        margin: 1em;
+    }
+    /* :checked */
+    input:checked ~ .tab-content {
+        max-height: 60em;
+    }
+    /* Icon */
+    label::before {
+        position: absolute;
+        left: -1em;
+        top: .5em;
+        display: block;
+        width: .5em;
+        height: .5em;
+        line-height: .25em;
+        text-align: center;
+        -webkit-transition: all .35s;
+        -o-transition: all .35s;
+        transition: all .35s;
+        margin-right: 3em;
+    }
+    input[type=checkbox] + label::before {
+        @include arrowcontent();
+    }
+    input[type=radio] + label::before {
+        content: "\25BC";
+    }
+    input[type=checkbox]:checked + label::before {
+        transform: rotate(90deg);
+    }
+    input[type=radio]:checked + label::before {
+        transform: rotateX(180deg);
+    }
+
+}
